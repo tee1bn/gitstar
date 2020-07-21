@@ -59,7 +59,7 @@ class Config
 	 */
 	public  static function domain()
 	{
-		return	self::host()."/taurus";
+		return	self::host()."/gitstar";
 
 	}
 

@@ -8,7 +8,7 @@ $capsule = new Capsule() ;
 $capsule->addConnection([
     'driver'    => 'mysql',
     'host'      => 'localhost',
-    'database'  => 'gbemi',
+    'database'  => 'gitstar',
     'username'  => 'root',
     'password'  => '',
     'charset'   => 'utf8',
