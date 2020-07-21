@@ -1,14 +1,20 @@
 <?php
 
 
+
+
+
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class newsletter extends Eloquent 
+class Newsletter extends Eloquent 
 {
 	
-	public $name ;
-	protected $fillable = ['email'];
-	protected $table = 'newsletters';
+	protected $fillable = [ 'email'];
+	
+	protected $table = 'newsletter';
+
+
+
 
 }
 
