@@ -90,6 +90,10 @@ $page_title = "User Verification";
                                           <?php
                                             $which = 'pending';
                                            $this->view('composed/user_documents', compact('user','which'), true);?>
+                                          <?php
+                                          echo "Approved";
+                                            $which = 'approved';
+                                           $this->view('composed/user_documents', compact('user','which'), true);?>
                                       </div>
                                       <div class="col-md-4">
 
@@ -163,15 +167,21 @@ $page_title = "User Verification";
                                 Process
                               </a>
 
+
+
+                              <a class="dropdown-item" target="_blank" href="<?=$document->user->AdminEditUrl;?>">
+                                <span type='span' class='label label-xs label-primary'>Edit Client</span>
+                              </a>
+
                               <?php if (! $document->user->has_verified_phone()) :?>
-                              <!-- <a class="dropdown-item" href="javascript:void(0)'">
+                              <a class="dropdown-item" href="javascript:void(0)'">
                                 <span type='span' class='label label-xs label-primary'> <?=MIS::generate_form(
                                   ['user_id'=> $document->user->id],
                                   "$domain/user_doc_crud/verify_phone",
                                   'Verify Phone'
                                   
                                   );?></span>
-                              </a> -->
+                              </a>
                               <?php endif;?>
 
                               <?php if (! $document->user->has_verified_email()) :?>
@@ -185,6 +195,7 @@ $page_title = "User Verification";
                               </a>
                               <?php endif;?>
 
+ 
                              
                           </div>
                         </div>
@@ -228,6 +239,15 @@ $page_title = "User Verification";
                         $('#view').modal('show');
                         $('#image').attr('src', $src);
                       }
+
+
+                      $(document).on('show.bs.modal', '.modal', function () {
+                          var zIndex = 1040 + (10 * $('.modal:visible').length);
+                          $(this).css('z-index', zIndex);
+                          setTimeout(function() {
+                              $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+                          }, 0);
+                      });
                     </script>
                   
               </div>
@@ -235,7 +255,7 @@ $page_title = "User Verification";
           </section>
 
           <ul class="pagination">
-              <?= $this->pagination_links($data, $per_page);?>
+              <?= $this->pagination_links($data, $per_page, $url);?>
           </ul>
 
         </div>

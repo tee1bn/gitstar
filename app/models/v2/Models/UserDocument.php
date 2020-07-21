@@ -25,21 +25,22 @@ class UserDocument extends Eloquent
     
     public static $statuses = [1=> 'In Review',2=> 'Approved', 3=> 'Declined'];
     public static $document_types = [
-   /*     1 => [
+     /*   1 => [
                 'name'=> 'Passport Photo',
                 'instruction'=> 'Passport Photo',
             ],*/
 
         2 => [
                 'name'=> 'ID Card',
-                'instruction'=> 'ID Photo',
+                'instruction'=> 'Please upload a clear government issued ID card e.g Driver License, Passport, PVC (Permanent voters card).
+                <br>suported format are: .jpg, .png',
             ],
-/*
+
         3 => [
                 'name'=> 'Address ',
-                'instruction'=> 'Address',
+                'instruction'=> 'Please upload a clear proof of residence e.g Utility bill, Waste Bill, Electricity bill, Water bill, Bank statement (having your fullname and address as filled during registration) <br> suported format are: .jpg, .png',
             ],
-*/
+
      
     ];	 
 

@@ -1,41 +1,65 @@
 <?php 
 
-
 $router =[
+	''=>'home',
+	'home'=>'home',
+	// 'w'=>'home',
+	'user'=>'UserController',			//this is used to build all urls of the user dashboard
 
-'admin-dashboard'=>'admin_dashboard',
-'admin-blog-post'=>'admin_posts',
-'admin-blog-comments'=>'admin_comment',
-'admin-media'=>'admin_media',
-'admin-upload'=>'admin_upload',
-'admin-saves'=>'admin_saves',
-'admin-users'=>'admin_users',
-'admin-newsletter'=>'admin_newsletter',
-'admin-delete'=>'admin_delete',
+	'support' 			=> 'SupportController',
+
+	'user-profile'		=>'UserProfileController',
+	'register' 			=> 'RegisterController',
+	'login' 			=> 'LoginController',
+	'verify' 			=> 'VerificationController',
+	'shop' 				=> 'shopController',
+	'error' 			=> 'ErrorController',
+	'forex-account' 			=> 'AccountController',
+
+	'test' => 'test/home',
+	'about' => 'AboutBrokersController',
+
+	'course_api' => 'courses/CoursesApiController',
+	// 'courses' => 'courses/CoursesController',
+	'courses' => 'courses/FreeCoursesController',
+	'instructor' => 'courses/InstructorController',
+
+	'guest' 	=> 'GuestController',
+	'blog' 	=> 'BlogController',
+	'genealogy' => 'GenealogyController',
+	'ref' 		=> 'ReferralController', //referral link handler
+	'forgot-password' 	=> 'forgotPasswordController',
+
+	'auto-match' => 'AutoMatchingController',	//this handles routine checks and commssions
+
+	'settings' => 'SettingsController',
+
+	'category_crud' => 'crud/CategorySpoof',
+	'campaign_crud' => 'crud/CampaignCrudController',
+	'campaign_execution' => 'crud/CampaignExecution',
+	'userbankcrud' => 'crud/UserBankCrudController',
+	'user_doc_crud' => 'crud/UserDocCrudController',
+	'deposit_crud' => 'crud/UserDepositCrudController',
+	'withdrawal_crud' => 'crud/UserWithdrawalCrudController',
+	'ticket_crud' => 'crud/TicketCrudController',
+	'access_crud' => 'crud/AccessCrud',
+	'survey_crud' => 'crud/SurveyCrud',
+	'cms_crud' => 'crud/CmsCrud',
+	'media' => 'crud/MediaController',
+	'survey_submit' => 'crud/SurveySubmit',
+	'survey' => 'SurveyController',
+	'signals' => 'SignalsController',
 
 
-''=>'home',
-'home'=>'home',
-// 'gitstar'=>'home',
+	'survey_crud_2' => 'SurveyCrud2',
+	#apis
+	'world' => 'api/WorldAPi',
 
 
-#routers for users
-'subscribe' => 'subscribe',
-'get-quote' => 'get_quote',
-'faq' => 'faq',
-'about-us' => 'about_us',
-'terms-and-conditions' => 'terms_and_conditions',
-
-'fashion-blog' =>'blog_listing',
-'blog-post' => 'blog_post',
-
-
-
-'frontend_saves' => 'frontend_saves',
-
-
-
-
-
+	#admin
+	'admin-dashboard' => 'AdminDashboardController', 
+	'admin' => 'AdminController', 
+	'admin-profile' => 'AdminProfileController', 
+	'admin-products' => 'AdminProductsController', 
 ];
 

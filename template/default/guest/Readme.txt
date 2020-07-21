@@ -1,6 +1,6 @@
-Thanks for downloading this theme!
+Thanks for downloading this template!
 
-Theme Name: Reveal
-Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+Template Name: Reveal
+Template URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
 Author: BootstrapMade.com
-Author URL: https://bootstrapmade.com
+License: https://bootstrapmade.com/license/

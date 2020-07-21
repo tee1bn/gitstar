@@ -23,92 +23,79 @@ $page_title = "CMS";
           </div> -->
         </div>
         <div class="content-body">
-          
-          <div class="col-12">
-            
-            <?php foreach (CMS::all() as $key => $page):?>
 
-                <div class="card">
-
-                <div class="card-header collapsed" aria-expanded="false" data-toggle="collapse" data-target="#demo<?=$page->id;?>">
-                  <a href="javascript:void(0);">Edit <?=$page->name;?> </a>
-                </div>
-                  <div class="card-body collapse" id="demo<?=$page->id;?>">
-                  <form 
-                    id="sub_form<?=$page->id;?>"
-                    class="ajax_form"
-                      action="<?=domain;?>/admin/update_cms" method="post" >
-                      <div class="card-body">
+      <section id="video-gallery" class="card">
+        <div class="card-header">
+          <h4 class="card-title" style="display: inline;">CMS</h4>
 
 
-                        <input type="" style="display: none;" name="criteria" value="<?=$page->criteria;?>">
-                        
-                          <div class="form-group">
-                            <label><?=$page->name;?></label>
-                            <p>
-                              <small><?=$page->description;?></small>
-                            </p>
-                             <textarea id="editor1<?=$page->id;?>" required=""
-                              name="settings" class="form-control"><?=$page->settings;?></textarea>
-                          </div>
-
-                        <button class="btn  btn-success pull-right">Save</button>
+          <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                <ul class="list-inline mb-0">
+                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                </ul>
+            </div>
+        </div>
+         <div class="card-content">
+          <div class="card-body">
 
 
-                      </div>                           
+                <?php foreach (CMS::all() as $key => $page):?>
+
+                    <div class="card">
+
+                    <div class="card-header collapsed" aria-expanded="false" data-toggle="collapse" data-target="#demo<?=$page->id;?>">
+                      <a href="javascript:void(0);">Edit <?=$page->name;?> </a>
+                    </div>
+                      <div class="card-body collapse" id="demo<?=$page->id;?>">
+                      <form 
+                        id="sub_form"
+                        class="ajax_form"
+                          action="<?=domain;?>/cms_crud/update_cms" method="post" >
+                          <div class="card-body">
+
+
+                            <input type="" style="display: none;" name="criteria" value="<?=$page->criteria;?>">
+                            
+                              <div class="form-group">
+                                <label><?=$page->name;?></label>
+                                <p>
+                                  <small><?=$page->description;?></small>
+                                </p>
+                                 <textarea id="editor1<?=$page->id;?>" required=""
+                                  name="settings" class="form-control editor1"><?=$page->settings;?></textarea>
+                              </div>
+
+                            <button class="btn  btn-success pull-right">Save</button>
+
+
+                          </div>                           
 
 
 
-                      
-                  </form>
-                </div>
-              </div>
-
-<!-- 
-
-              <script>    
-                    tinymce.init({
-                      selector: 'editor1<?=$page->id;?>' ,
-                      height : "580",
-                      theme: "silver",
-                      relative_urls: false,
-                      remove_script_host: false,
-                      convert_urls: true,
-                      statusbar: false,
-                      plugins: [
-                          "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-                          "searchreplace wordcount visualblocks visualchars code fullscreen",
-                          "insertdatetime media nonbreaking save table contextmenu directionality",
-                          "emoticons template paste textcolor colorpicker textpattern responsivefilemanager"
-                      ],
-                      toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-                      toolbar2: "| responsivefilemanager print preview media | forecolor backcolor emoticons",
-                      setup: function (editor) {
-                          editor.on('change', function (e) {
-                              editor.save();
-                          });
-                      }
-
-                    });
-
-              </script> -->
-
-        <script>   
-        
-                  CKEDITOR.replace('editor1<?=$page->id;?>');
-
-        </script>
+                          
+                      </form>
+                    </div>
+                  </div>
 
 
-        <?php endforeach;?>
+
+            <script>    
+                CKEDITOR.replace('editor1<?=$page->id;?>' );
+            </script>
 
 
+            <?php endforeach;?>
+
+
+
+
+              
           </div>
+        </div>
+      </section>
 
-    
-
-      
-      
 
         </div>
       </div>

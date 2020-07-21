@@ -16,7 +16,6 @@ class CMS extends Eloquent
 
 	public static function fetch($criteria)
 	{
-
 		$item =  self::where('criteria', $criteria)->first();
 		return ($item->settings);
 	}

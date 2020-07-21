@@ -52,7 +52,7 @@
 			<div class="card border-grey border-lighten-3 px-2 py-2 m-0">
 				<div class="card-header border-0">
 					<div class="card-title text-center">
-						<img src="<?=$logo;?>" style="height: 110px;" alt="branding logo">
+						<img src="<?=domain;?>/<?=$logo;?>" style="height: 50px;" alt="<?=project_name;?> logo">
 					</div>
 
 

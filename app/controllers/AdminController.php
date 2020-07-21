@@ -31,6 +31,11 @@ class AdminController extends controller
         $this->middleware('administrator')->mustbe_loggedin();
     }
 
+    public function index()
+    {
+        echo "string";
+    }
+
 
     public function investment_detail($investment_id)
     {

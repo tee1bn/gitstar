@@ -28,15 +28,7 @@ class SupportTicket extends Eloquent
 
 
 
-	public function compile_email($core_msg) {
 
-	    	$my_message_template ="$core_msg";
-
-	    return $my_message_template;
-	}
-
-
-	
 	
 
 	public function getUserLinkAttribute()
@@ -45,7 +37,6 @@ class SupportTicket extends Eloquent
 
 		return $link;
 	}
-
 	
 	public function getlinkAttribute()
 	{

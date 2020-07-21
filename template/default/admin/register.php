@@ -2,12 +2,11 @@
 $page_title = "Register";
 include 'includes/auth_header.php';?>
 
-
-
+	
 
 					<!-- <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Create Account</span></h6> -->
 				</div>
-				<div class="card-content">	
+				<div class="card-content" ng-controller="RegisterationController">	
 					<div class="card-body" style="padding-top: 0px;">
                 <form data-toggle="validator"  class="form-horizontal form-simple"
                  id="loginform" action="<?=domain;?>/register/register" method="post">

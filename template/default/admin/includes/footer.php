@@ -1,5 +1,13 @@
 
+    <div id="new_category_app"></div>
 
+    <script>
+        open_new_category_modal = function ($data) {
+            $('#new_category_app').html($data.app);
+            $('#add_to_campaign_category').modal('show');
+
+        }
+    </script>
 
 
     <div class="sidenav-overlay"></div>
@@ -8,8 +16,8 @@
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light navbar-border">
       <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; <?=date("Y");?> <a class="text-bold-800 grey darken-2" href="<?=domain;?>"><?=project_name;?>      </a></span>
-        <!-- <span class="float-md-right d-none d-lg-block">Built By <a href="http://gitstardigital.com" target="_blank">Gitstar Digital</a></span></p> -->
     </footer>
+
     <!-- END: Footer-->
 
 

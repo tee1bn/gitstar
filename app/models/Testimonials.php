@@ -11,7 +11,7 @@ class Testimonials extends Eloquent
 	protected $table = 'testimonials';
 
 
-public static function approved()
+public function approved()
 {
 	return self::where('approval_status', 1);
 }
@@ -20,19 +20,6 @@ public static function approved()
 public function user()
 {
 	return $this->belongsTo('User', 'user_id');
-}
-
-public function getprofilepicAttribute()
-{
-	if ($this->user == null) {
-		$pix = Config::default_profile_pix();
-
-	}else{
-
-		$pix = $this->user->profilepic;
-	}
-
-	return $pix;
 }
 
 
