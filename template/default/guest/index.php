@@ -205,7 +205,7 @@ $page_keywords = "website designers,web design,web design company,web design com
                 <?=$testimonial->content;?>
                 <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
               </p>
-              <img src="<?=$this_folder;?>/asset/img/testimonial-1.jpg" class="testimonial-img" alt="">
+              <img src="<?=domain;?>/<?=$testimonial->attester_pic;?>" class="testimonial-img" alt="">
               <h3><?=$testimonial->attester;?></h3>
               <h4><?=$testimonial->bio;?></h4>
             </div>

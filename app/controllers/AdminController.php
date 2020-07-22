@@ -1415,7 +1415,7 @@ class AdminController extends controller
         $sieve = $_REQUEST;
         // $sieve = array_merge($sieve, $extra_sieve);
 
-        $query = Testimonials::latest()->where('video_link', '!=', null);
+        $query = Testimonials::latest();
         // ->where('status', 1);  //in review
         $sieve = array_merge($sieve);
         $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
