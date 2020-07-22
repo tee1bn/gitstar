@@ -269,6 +269,7 @@ class ComposerStaticInit81eb7d45cb86396167b941f75b6bed30
         'Filters\\Filters\\PostFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/PostFilter.php',
         'Filters\\Filters\\SubscriptionOrderFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/SubscriptionOrderFilter.php',
         'Filters\\Filters\\SupportTicketFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/SupportTicketFilter.php',
+        'Filters\\Filters\\TestimonialsFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/TestimonialsFilter.php',
         'Filters\\Filters\\TradingAccountFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/TradingAccountFilter.php',
         'Filters\\Filters\\UserBankFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/UserBankFilter.php',
         'Filters\\Filters\\UserDocumentFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/UserDocumentFilter.php',

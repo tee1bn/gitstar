@@ -17,6 +17,7 @@ use v2\Models\Withdrawal;
 use v2\Models\Market;
 use  Filters\Filters\MarketFilter;
 use  Filters\Filters\PostFilter;
+use Filters\Filters\TestimonialsFilter;
 
 
 
@@ -34,6 +35,49 @@ class AdminController extends controller
 
         $this->middleware('administrator')->mustbe_loggedin();
     }
+
+
+
+    public function upload_testimonial_pic()
+    {
+        $order_id = $_POST['order_id'];
+        $order = Testimonials::find($order_id);
+        $order->upload_pic($_FILES['payment_proof']);
+        Session::putFlash('success', "#$order_id Testimonial Uploaded Successfully!");
+        Redirect::back();
+
+    }
+
+
+    
+    public function toggle_blogpost($post_id)
+    {
+        $last_submission =  Market::where('category', 'post')
+                          ->where('item_id', $post_id)
+                          ->latest()
+                          ->first();
+
+            if ($last_submission == null) {
+                Redirect::back();
+            }
+
+
+            if($last_submission->approval_status_is('approved')){
+
+                $last_submission->decline();
+
+                Session::putFlash("success", "Declined");
+
+            }else{
+                $last_submission->approve();
+                Session::putFlash("success", "Approved");
+            }
+
+
+
+            Redirect::back();
+    }
+
 
 
     public function investment_detail($investment_id)
@@ -1366,9 +1410,32 @@ class AdminController extends controller
 
     public function testimonials()
     {
-        $this->view('admin/testimonials');
 
+
+        $sieve = $_REQUEST;
+        // $sieve = array_merge($sieve, $extra_sieve);
+
+        $query = Testimonials::latest()->where('video_link', '!=', null);
+        // ->where('status', 1);  //in review
+        $sieve = array_merge($sieve);
+        $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
+        $per_page = 50;
+        $skip = (($page - 1) * $per_page);
+
+        $filter = new  TestimonialsFilter($sieve);
+
+        $data = $query->Filter($filter)->count();
+
+        $testimonials = $query->Filter($filter)
+            ->offset($skip)
+            ->take($per_page)
+            ->get();  //filtered
+
+            $note = MIS::filter_note($testimonials->count(), ($data), (Testimonials::count()),  $sieve, 1);
+
+        $this->view('admin/testimonials', compact('testimonials', 'sieve', 'data', 'per_page','note'));
     }
+
 
     public function approve_testimonial($testimonial_id)
     {
@@ -1421,7 +1488,7 @@ class AdminController extends controller
         $testimony->update([
             'attester' => Input::get('attester'),
             'content' => Input::get('testimony'),
-            'approval_status' => 0
+            'bio' => Input::get('bio'),
         ]);
 
 

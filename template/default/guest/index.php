@@ -193,45 +193,26 @@ $page_keywords = "website designers,web design,web design company,web design com
         </div>
         <div class="owl-carousel testimonials-carousel">
 
+
+            <?php 
+
+            $testimonials = Testimonials::approved()->take(6)->get();
+
+             foreach ($testimonials as $key => $testimonial):?>
             <div class="testimonial-item">
               <p>
                 <img src="<?=$this_folder;?>/asset/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Fluent experience, I got exactly what I requested...looking forward to working with <?=project_name;?> again.
+                <?=$testimonial->content;?>
                 <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
               </p>
               <img src="<?=$this_folder;?>/asset/img/testimonial-1.jpg" class="testimonial-img" alt="">
-              <h3>Mr. Wissam Yamout</h3>
-              <h4>Contractor @ iptvboy</h4>
+              <h3><?=$testimonial->attester;?></h3>
+              <h4><?=$testimonial->bio;?></h4>
             </div>
+
+          <?php endforeach;?>
 
        
-
-
-
-            <div class="testimonial-item">
-              <p>
-                <img src="<?=$this_folder;?>/asset/img/quote-sign-left.png" class="quote-sign-left" alt=""><?=project_name;?> was 
-                very understandable and always delivers on time. I will recommend them any day. They complete and finish the job.
-                <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="<?=$this_folder;?>/asset/img/testimonial-2.jpg" class="testimonial-img" alt="">
-              <h3>Mr. Lanre Olajuwon</h3>
-              <h4>Ceo @(Edtek Innovations)</h4>
-            </div>
-
-
-
-
-            <div class="testimonial-item">
-              <p>
-                <img src="<?=$this_folder;?>/asset/img/quote-sign-left.png" class="quote-sign-left" alt="">Always at ease when working with <?=project_name;?>
-                <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="<?=$this_folder;?>/asset/img/testimonial-3.jpg" class="testimonial-img" alt="">
-              <h3>Mr. Kunle Aladeusi</h3>
-              <h4>Esteemed Staff @ KPMG</h4>
-            </div>
-
         </div>
 
       </div>

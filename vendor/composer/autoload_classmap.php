@@ -29,6 +29,7 @@ return array(
     'Filters\\Filters\\PostFilter' => $baseDir . '/app/models/v2/Filters/Filters/PostFilter.php',
     'Filters\\Filters\\SubscriptionOrderFilter' => $baseDir . '/app/models/v2/Filters/Filters/SubscriptionOrderFilter.php',
     'Filters\\Filters\\SupportTicketFilter' => $baseDir . '/app/models/v2/Filters/Filters/SupportTicketFilter.php',
+    'Filters\\Filters\\TestimonialsFilter' => $baseDir . '/app/models/v2/Filters/Filters/TestimonialsFilter.php',
     'Filters\\Filters\\TradingAccountFilter' => $baseDir . '/app/models/v2/Filters/Filters/TradingAccountFilter.php',
     'Filters\\Filters\\UserBankFilter' => $baseDir . '/app/models/v2/Filters/Filters/UserBankFilter.php',
     'Filters\\Filters\\UserDocumentFilter' => $baseDir . '/app/models/v2/Filters/Filters/UserDocumentFilter.php',

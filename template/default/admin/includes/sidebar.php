@@ -43,6 +43,7 @@
             <li><a class="menu-item" href="<?=domain;?>/admin/open-tickets">Open Tickets</a></li>
             <li><a class="menu-item" href="<?=domain;?>/admin/closed-tickets">Closed Tickets</a></li>
             <li><a class="menu-item" href="<?=domain;?>/admin/broadcast">News</a></li>
+            <li><a class="menu-item" href="<?=domain;?>/admin/testimonials">Testimonals</a></li>
           </ul>
         </li> 
 

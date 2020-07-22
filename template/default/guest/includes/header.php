@@ -101,7 +101,7 @@ $address = '<address>17, Isikalu lane, Apapa, Lagos, Nigeria</address>
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li> -->
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="<?=domain;?>#contact">Contact</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
