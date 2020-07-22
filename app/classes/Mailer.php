@@ -14,16 +14,16 @@ class Mailer extends PHPMailer
                 // //itsnewsalesmailbox
 
                 $this->IsSMTP();
-                $this->Host = "tauruscapital.biz";  // specify main and backup server
+                $this->Host = "gitstardigital.com";  // specify main and backup server
                 $this->SMTPAuth = true;     // turn on SMTP authentication
-                $this->Username = "noreply@tauruscapital.biz";  // SMTP username
-                $this->Password = "itstauruscapital.biz"; // SMTP password
+                $this->Username = "noreply@gitstardigital.com";  // SMTP username
+                $this->Password = "_Wj4kGeI]cAc"; // SMTP password
 
 
                 $this->SMTPKeepAlive = true; // SMTP connection will not close after each email sent, reduces SMTP overhead
 
                 //From email address and name
-                $this->From = "noreply@tauruscapital.biz";
+                $this->From = "noreply@gitstardigital.com";
 
                 $from_name = Config::project_name();
 
@@ -31,12 +31,12 @@ class Mailer extends PHPMailer
                     $this->FromName = $from_name;
 
                     //Address to which recipient will reply
-                    $this->addReplyTo("mailbox@tauruscapital.biz", $from_name);
+                    $this->addReplyTo("hello@gitstardigital.com", $from_name);
                 } else {
                     $this->FromName = $from_name;
 
                     //Address to which recipient will reply
-                    $this->addReplyTo("mailbox@tauruscapital.biz", "$from_name");
+                    $this->addReplyTo("hello@gitstardigital.com", "$from_name");
                 }
 
                 //Send HTML or Plain Text email

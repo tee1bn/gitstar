@@ -21,11 +21,6 @@
   <link href="<?=$this_folder;?>/asset/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="<?=$this_folder;?>/asset/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="<?=$this_folder;?>/asset/css/style.css" rel="stylesheet">
-
-
-
   <!-- Main Stylesheet File -->
   <link href="<?=$this_folder;?>/asset/css/style.css" rel="stylesheet">
 
