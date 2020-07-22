@@ -17,6 +17,7 @@
   <!-- JavaScript Libraries -->
 
 
+
   <!-- Vendor JS Files -->
   <script src="<?=$this_folder;?>/asset/vendor/jquery/jquery.min.js"></script>
   <script src="<?=$this_folder;?>/asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -34,17 +35,12 @@
   <script src="<?=$this_folder;?>/asset/js/main.js"></script>
 
 
-  <!-- Contact Form JavaScript File -->
-  <!-- <script src="<?=$this_folder;?>/asset/contactform/contactform.js"></script> -->
+
+
 
 <!--share this-->
 <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5b38e81bc5ed96001152162e&product=sticky-share-buttons' async='async'></script>
 
-
-
-  <!-- Template Main Javascript File -->
-  <script src="<?=$this_folder;?>/asset/js/main.js"></script>
-  
   <!--drift-->
   <script>
 "use strict";

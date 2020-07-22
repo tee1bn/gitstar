@@ -3,25 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="keywords" content="<?=@$page_keywords;?>">
-  <meta name="description" content="<?=@$page_description;?>">
+  <meta name="keywords" content="<?=@$page_keywords ?? '';?>">
+  <meta name="description" content="<?=$page_description??'';?>">
   <meta name="author" content="<?=$page_author;?>">
-  <title><?=@$page_title;?> | <?=project_name;?></title>
+  <title><?=$page_title ?? '';?> | <?=project_name;?></title>
   <link rel="apple-touch-icon" href="<?=$logo;?>">
   <link rel="shortcut icon" type="image/x-icon" href="<?=$logo;?>">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 
+
+
+  <!-- Vendor CSS Files -->
   <link href="<?=$this_folder;?>/asset/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="<?=$this_folder;?>/asset/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="<?=$this_folder;?>/asset/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="<?=$this_folder;?>/asset/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="<?=$this_folder;?>/asset/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="<?=$this_folder;?>/asset/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/vendor/owl.carousel/asset/owl.carousel.min.css" rel="stylesheet">
   <link href="<?=$this_folder;?>/asset/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- Main Stylesheet File -->
+  <!-- Template Main CSS File -->
   <link href="<?=$this_folder;?>/asset/css/style.css" rel="stylesheet">
 
 

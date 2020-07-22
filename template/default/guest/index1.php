@@ -10,23 +10,23 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?=$this_folder;?>/asset/img/favicon.png" rel="icon">
+  <link href="<?=$this_folder;?>/asset/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/vendor/owl.carousel/asset/owl.carousel.min.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="<?=$this_folder;?>/asset/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Reveal - v2.1.0
@@ -62,7 +62,7 @@
       <div id="logo" class="pull-left">
         <h1><a href="index.html">Reve<span>al</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+        <!-- <a href="index.html"><img src="<?=$this_folder;?>/asset/img/logo.png" alt=""></a>-->
       </div>
 
       <nav id="nav-menu-container">
@@ -98,11 +98,11 @@
     </div>
 
     <div id="intro-carousel" class="owl-carousel">
-      <div class="item" style="background-image: url('assets/img/intro-carousel/1.jpg');"></div>
-      <div class="item" style="background-image: url('assets/img/intro-carousel/2.jpg');"></div>
-      <div class="item" style="background-image: url('assets/img/intro-carousel/3.jpg');"></div>
-      <div class="item" style="background-image: url('assets/img/intro-carousel/4.jpg');"></div>
-      <div class="item" style="background-image: url('assets/img/intro-carousel/5.jpg');"></div>
+      <div class="item" style="background-image: url('<?=$this_folder;?>/asset/img/intro-carousel/1.jpg');"></div>
+      <div class="item" style="background-image: url('<?=$this_folder;?>/asset/img/intro-carousel/2.jpg');"></div>
+      <div class="item" style="background-image: url('<?=$this_folder;?>/asset/img/intro-carousel/3.jpg');"></div>
+      <div class="item" style="background-image: url('<?=$this_folder;?>/asset/img/intro-carousel/4.jpg');"></div>
+      <div class="item" style="background-image: url('<?=$this_folder;?>/asset/img/intro-carousel/5.jpg');"></div>
     </div>
 
   </section><!-- End Intro Section -->
@@ -114,7 +114,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 about-img">
-            <img src="assets/img/about-img.jpg" alt="">
+            <img src="<?=$this_folder;?>/asset/img/about-img.jpg" alt="">
           </div>
 
           <div class="col-lg-6 content">
@@ -189,14 +189,14 @@
         </div>
 
         <div class="owl-carousel clients-carousel">
-          <img src="assets/img/clients/client-1.png" alt="">
-          <img src="assets/img/clients/client-2.png" alt="">
-          <img src="assets/img/clients/client-3.png" alt="">
-          <img src="assets/img/clients/client-4.png" alt="">
-          <img src="assets/img/clients/client-5.png" alt="">
-          <img src="assets/img/clients/client-6.png" alt="">
-          <img src="assets/img/clients/client-7.png" alt="">
-          <img src="assets/img/clients/client-8.png" alt="">
+          <img src="<?=$this_folder;?>/asset/img/clients/client-1.png" alt="">
+          <img src="<?=$this_folder;?>/asset/img/clients/client-2.png" alt="">
+          <img src="<?=$this_folder;?>/asset/img/clients/client-3.png" alt="">
+          <img src="<?=$this_folder;?>/asset/img/clients/client-4.png" alt="">
+          <img src="<?=$this_folder;?>/asset/img/clients/client-5.png" alt="">
+          <img src="<?=$this_folder;?>/asset/img/clients/client-6.png" alt="">
+          <img src="<?=$this_folder;?>/asset/img/clients/client-7.png" alt="">
+          <img src="<?=$this_folder;?>/asset/img/clients/client-8.png" alt="">
         </div>
 
       </div>
@@ -224,91 +224,91 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 2</h4>
               <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 2</h4>
               <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 2</h4>
               <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 3</h4>
               <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 1</h4>
               <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 3</h4>
               <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <img src="<?=$this_folder;?>/asset/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="<?=$this_folder;?>/asset/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
@@ -329,55 +329,55 @@
 
           <div class="testimonial-item">
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
-            <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
+            <img src="<?=$this_folder;?>/asset/img/testimonial-1.jpg" class="testimonial-img" alt="">
             <h3>Saul Goodman</h3>
             <h4>Ceo &amp; Founder</h4>
           </div>
 
           <div class="testimonial-item">
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
-            <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
+            <img src="<?=$this_folder;?>/asset/img/testimonial-2.jpg" class="testimonial-img" alt="">
             <h3>Sara Wilsson</h3>
             <h4>Designer</h4>
           </div>
 
           <div class="testimonial-item">
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
-            <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+            <img src="<?=$this_folder;?>/asset/img/testimonial-3.jpg" class="testimonial-img" alt="">
             <h3>Jena Karlis</h3>
             <h4>Store Owner</h4>
           </div>
 
           <div class="testimonial-item">
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
-            <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
+            <img src="<?=$this_folder;?>/asset/img/testimonial-4.jpg" class="testimonial-img" alt="">
             <h3>Matt Brandon</h3>
             <h4>Freelancer</h4>
           </div>
 
           <div class="testimonial-item">
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?=$this_folder;?>/asset/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
-            <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
+            <img src="<?=$this_folder;?>/asset/img/testimonial-5.jpg" class="testimonial-img" alt="">
             <h3>John Larson</h3>
             <h4>Entrepreneur</h4>
           </div>
@@ -412,7 +412,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/team-1.jpg" alt=""></div>
+              <div class="pic"><img src="<?=$this_folder;?>/asset/img/team-1.jpg" alt=""></div>
               <div class="details">
                 <h4>Walter White</h4>
                 <span>Chief Executive Officer</span>
@@ -428,7 +428,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/team-2.jpg" alt=""></div>
+              <div class="pic"><img src="<?=$this_folder;?>/asset/img/team-2.jpg" alt=""></div>
               <div class="details">
                 <h4>Sarah Jhinson</h4>
                 <span>Product Manager</span>
@@ -444,7 +444,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/team-3.jpg" alt=""></div>
+              <div class="pic"><img src="<?=$this_folder;?>/asset/img/team-3.jpg" alt=""></div>
               <div class="details">
                 <h4>William Anderson</h4>
                 <span>CTO</span>
@@ -460,7 +460,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/team-4.jpg" alt=""></div>
+              <div class="pic"><img src="<?=$this_folder;?>/asset/img/team-4.jpg" alt=""></div>
               <div class="details">
                 <h4>Amanda Jepson</h4>
                 <span>Accountant</span>
@@ -577,20 +577,20 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/wow/wow.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="assets/vendor/superfish/superfish.min.js"></script>
-  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/jquery/jquery.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/php-email-form/validate.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/wow/wow.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/venobox/venobox.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/superfish/superfish.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?=$this_folder;?>/asset/js/main.js"></script>
 
 </body>
 
