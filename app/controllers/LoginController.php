@@ -25,20 +25,6 @@ class LoginController extends controller
     }
 
 
-
-        public function admin_login()
-        {
-            
-        /*if($this->auth() ){
-            Redirect::to('admin-dashboard');
-        }*/
-        
-        $this->view('admin/login', []);
-
-    }
-
-
-
     // authenticateing admnistrators
     public function authenticateAdmin()
     {

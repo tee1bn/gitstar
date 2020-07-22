@@ -110,9 +110,6 @@ $page_title = "Dashboard";
 
 
 
-
-
-
       <section id="video-gallery" class="card">
         <div class="card-header">
           <h4 class="card-title">News</h4>
@@ -135,9 +132,9 @@ $page_title = "Dashboard";
                      
                            <?php $i=1; foreach (BroadCast::live()->take(3) as $broadcast) :?>
                      
-                        <li class="list-group-item bg-dark">
-                            <span class="badge bg-dark float-right">
-                                <?= $broadcast->created_at->toFormattedDateString();?></span>
+                        <li class="list-group-item">
+                            <span class="badge badge-pill bg-primary float-right">
+                                <?=$broadcast->created_at->toFormattedDateString();?></span>
                             <?=$broadcast->broadcast_message;?>
                         </li>
                         
@@ -149,6 +146,28 @@ $page_title = "Dashboard";
             </div>
         </div>
 
+<!-- 
+
+        <table class="table mb-0">
+                        <thead>
+                            <tr>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        <?php $i=1; foreach (BroadCast::live() as $broadcast) :?>
+                        <tr>
+                            <td><?=$broadcast->broadcast_message;?></td>
+                            <td><?=$broadcast->created_at->toFormattedDateString();?></td>
+                        </tr>
+                        <?php $i++; endforeach ;?>
+
+
+                        </tbody>
+                    </table> -->
+
+
+        
       </div>
     </div>
       </section>

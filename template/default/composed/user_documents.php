@@ -2,7 +2,7 @@
 <table class="table table-striped table-sm">
   <?php 
 
-    if ($which=='pending') {
+    if ((isset($which)) &&($which=='pending')) {
       $documents = $user->pending_documents;
 
     }else{
@@ -13,15 +13,15 @@
     $i=1; foreach ($documents as $key => $doc) :?>
 
   <tr>
-    <td><?=$i;?>) <?=$doc->DisplayStatus;?> 
-        <a href="<?=domain;?>/<?=$doc->path;?>" target="_blank"  class="float-right"><?=$doc->Type['name'];?></a></td>
+    <td><?=$i;?>) <?=$doc->DisplayStatus;?>  
+    <a href="<?=domain;?>/<?=$doc->path;?>" target="_blank"  class="float-right"><?=$doc->Type['name'];?></a></td>
 
-     <!-- <a href="javascript:void(0);" onclick="open_smodal('<?=domain;?>/<?=$doc->path;?>')" class="float-right"><?=$doc->Type['name'];?></a></td> -->
+    <!-- <a  href="javascript:void(0);" onclick="open_smodal('<?=domain;?>/<?=$doc->path;?>')" class="float-right"><?=$doc->Type['name'];?></a></td> -->
   </tr>
   <?php $i++; endforeach ;?>
 
   <div class="modal fade" id="myModdoc">
-    <div class="modal-dialog modal-lg" style="z-index: 999;">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
 
         <!-- Modal Header -->

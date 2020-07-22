@@ -7,7 +7,7 @@
 
 
                         if ($ticket==null) {
-                            $link = \Config::domain()."/contacts";
+                          $link = \Config::domain()."/contact-us";
                             Redirect::to($link); 
 
                             die();
@@ -41,9 +41,10 @@
                                     </p>
                             </div>
                              <div class="col-sm-4 ">
-                                    <small class="float-right">Ticket ID: <?=$ticket->code;?><?=$ticket->displayStatus;?></small><br>
+                                    <small class="float-right">Ticket ID: <?=$ticket->code;?></small><br>
                                     <small class="float-right"> <?=$ticket->created_at->format('M j, Y g:i A');?></small><br>
-                                    <small class="float-right"><?=$ticket->closeButton;?></small><br>
+                                    <small class="float-right"><?=$ticket->displayStatus;?></small><br>
+                                    <?=$ticket->closeButton;?>
                                 </div>         
                           
                       </div>
@@ -109,7 +110,7 @@
                     </div>
 
 
-                    <?php if ($this->admin()) :?>
+                    <?php if (@$_SESSION['admin_code']) :?>
                       <script>
                           CKEDITOR.replace('editor1');
                       </script>

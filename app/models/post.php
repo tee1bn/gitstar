@@ -4,10 +4,14 @@
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use v2\Models\Market;
 
+use  Filters\Traits\Filterable;
+
+
 class Post extends Eloquent 
 {
+	use Filterable;
 		
-		protected $fillable = ['title', 'category_id','user_id', 'image_path' , 'content'];
+		protected $fillable = ['title', 'category_id','user_id', 'image_path' , 'content', 'tags', 'consise'];
 
 
     public static $category_in_market = 'post';
@@ -239,6 +243,11 @@ class Post extends Eloquent
 		return "blog/post/{$this->id}/{$this->url_title()}";
 	}
 
+	public function getProjectUrlAttribute()
+	{
+		return "project/{$this->id}/{$this->url_title()}";
+	}
+
 	public function format_created_at()
 	{
 		return date("M d, Y", strtotime($this->created_at)) ;
@@ -369,6 +378,16 @@ class Post extends Eloquent
 			return [];
 		}
       return  json_decode($value, true);       
+	}
+
+
+
+	public function gettagsArrayAttribute()
+	{
+		if ($this->tags==null) {
+			return [];
+		}
+      return  json_decode($this->tags, true);       
 	}
 
 

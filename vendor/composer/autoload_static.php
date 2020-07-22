@@ -4,19 +4,59 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
+class ComposerStaticInit81eb7d45cb86396167b941f75b6bed30
 {
     public static $files = array (
+        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '6b06ce8ccf69c43a60a1e48495a034c9' => __DIR__ . '/..' . '/react/promise-timer/src/functions.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        's' => 
+        array (
+            'setasign\\Fpdi\\' => 14,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Iconv\\' => 23,
+            'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\Routing\\' => 26,
+            'Symfony\\Component\\HttpFoundation\\' => 33,
+        ),
+        'R' => 
+        array (
+            'React\\Stream\\' => 13,
+            'React\\Socket\\' => 13,
+            'React\\Promise\\Timer\\' => 20,
+            'React\\Promise\\' => 14,
+            'React\\EventLoop\\' => 16,
+            'React\\Dns\\' => 10,
+            'React\\Cache\\' => 12,
+            'Razorpay\\Tests\\' => 15,
+            'Razorpay\\Api\\' => 13,
+            'Ratchet\\RFC6455\\' => 16,
+            'Ratchet\\' => 8,
+        ),
+        'P' => 
+        array (
+            'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
+        'M' => 
+        array (
+            'Mpdf\\' => 5,
         ),
         'I' => 
         array (
@@ -25,6 +65,17 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
         ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Inflector\\' => 26,
+            'DeepCopy\\' => 9,
+        ),
         'C' => 
         array (
             'Carbon\\' => 7,
@@ -32,13 +83,101 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
     );
 
     public static $prefixDirsPsr4 = array (
+        'setasign\\Fpdi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
+        'Symfony\\Polyfill\\Iconv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-iconv',
+        ),
+        'Symfony\\Contracts\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation-contracts',
+        ),
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Symfony\\Component\\Routing\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/routing',
+        ),
+        'Symfony\\Component\\HttpFoundation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'React\\Stream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/stream/src',
+        ),
+        'React\\Socket\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/socket/src',
+        ),
+        'React\\Promise\\Timer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/promise-timer/src',
+        ),
+        'React\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/promise/src',
+        ),
+        'React\\EventLoop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/event-loop/src',
+        ),
+        'React\\Dns\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/dns/src',
+        ),
+        'React\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/cache/src',
+        ),
+        'Razorpay\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/razorpay/razorpay/tests',
+        ),
+        'Razorpay\\Api\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/razorpay/razorpay/src',
+        ),
+        'Ratchet\\RFC6455\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ratchet/rfc6455/src',
+        ),
+        'Ratchet\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cboden/ratchet/src/Ratchet',
+        ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Mpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -56,6 +195,26 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
         ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Doctrine\\Common\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'DeepCopy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -63,11 +222,25 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
     );
 
     public static $prefixesPsr0 = array (
-        'D' => 
+        'R' => 
         array (
-            'Doctrine\\Common\\Inflector\\' => 
+            'Requests' => 
             array (
-                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+                0 => __DIR__ . '/..' . '/rmccue/requests/library',
+            ),
+        ),
+        'P' => 
+        array (
+            'PayPal' => 
+            array (
+                0 => __DIR__ . '/..' . '/paypal/rest-api-sdk-php/lib',
+            ),
+        ),
+        'E' => 
+        array (
+            'Evenement' => 
+            array (
+                0 => __DIR__ . '/..' . '/evenement/evenement/src',
             ),
         ),
     );
@@ -76,11 +249,11 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
         'Access' => __DIR__ . '/../..' . '/app/models/Access.php',
         'Admin' => __DIR__ . '/../..' . '/app/models/Admin.php',
         'AdminAccess' => __DIR__ . '/../..' . '/app/models/AdminAccess.php',
+        'Apis\\CoinWayApi' => __DIR__ . '/../..' . '/app/models/Apis/CoinWayApi.php',
         'AvailableCurrency' => __DIR__ . '/../..' . '/app/models/AvailableCurrency.php',
         'BroadCast' => __DIR__ . '/../..' . '/app/models/BroadCast.php',
         'CMS' => __DIR__ . '/../..' . '/app/models/CMS.php',
         'CampaignCategory' => __DIR__ . '/../..' . '/app/models/v2/Models/CampaignCategory.php',
-        'Cart' => __DIR__ . '/../..' . '/app/classes/Cart.php',
         'Category' => __DIR__ . '/../..' . '/app/models/Category.php',
         'Company' => __DIR__ . '/../..' . '/app/models/Company.php',
         'Config' => __DIR__ . '/../..' . '/app/classes/Config.php',
@@ -93,11 +266,14 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
         'Filters\\Filters\\MarketFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/MarketFilter.php',
         'Filters\\Filters\\Mt4TradesFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/testFilter.php',
         'Filters\\Filters\\OrderFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/OrderFilter.php',
+        'Filters\\Filters\\PostFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/PostFilter.php',
+        'Filters\\Filters\\SubscriptionOrderFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/SubscriptionOrderFilter.php',
         'Filters\\Filters\\SupportTicketFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/SupportTicketFilter.php',
         'Filters\\Filters\\TradingAccountFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/TradingAccountFilter.php',
         'Filters\\Filters\\UserBankFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/UserBankFilter.php',
         'Filters\\Filters\\UserDocumentFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/UserDocumentFilter.php',
         'Filters\\Filters\\UserFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/UserFilter.php',
+        'Filters\\Filters\\WalletFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/WalletFilter.php',
         'Filters\\Filters\\WithdrawalFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/Filters/WithdrawalFilter.php',
         'Filters\\QueryFilter' => __DIR__ . '/../..' . '/app/models/v2/Filters/QueryFilter.php',
         'Filters\\Traits\\Filterable' => __DIR__ . '/../..' . '/app/models/v2/Filters/Traits/Filterable.php',
@@ -108,6 +284,7 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
         'Mailer' => __DIR__ . '/../..' . '/app/classes/Mailer.php',
         'MlmSales' => __DIR__ . '/../..' . '/app/models/MlmSales.php',
         'MlmSetting' => __DIR__ . '/../..' . '/app/models/MlmSetting.php',
+        'Newsletter' => __DIR__ . '/../..' . '/app/models/Newsletter.php',
         'Notifications' => __DIR__ . '/../..' . '/app/models/Notifications.php',
         'Observers\\CompanyObserver' => __DIR__ . '/../..' . '/app/models/Observers/CompanyObserver.php',
         'Orders' => __DIR__ . '/../..' . '/app/models/Orders.php',
@@ -119,6 +296,7 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
         'ProductsCategory' => __DIR__ . '/../..' . '/app/models/ProductsCategory.php',
         'Questionaire' => __DIR__ . '/../..' . '/app/models/Questionaire.php',
         'QuestionaireResponse' => __DIR__ . '/../..' . '/app/models/QuestionaireResponse.php',
+        'Rank' => __DIR__ . '/../..' . '/app/models/v2/Rank.php',
         'Redirect' => __DIR__ . '/../..' . '/app/classes/Redirect.php',
         'SMS' => __DIR__ . '/../..' . '/app/classes/SMS.php',
         'Session' => __DIR__ . '/../..' . '/app/classes/Session.php',
@@ -137,35 +315,56 @@ class ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57
         'World\\City' => __DIR__ . '/../..' . '/app/models/World/City.php',
         'World\\Country' => __DIR__ . '/../..' . '/app/models/World/Country.php',
         'World\\State' => __DIR__ . '/../..' . '/app/models/World/State.php',
+        'app' => __DIR__ . '/../..' . '/app/core/app.php',
         'classes\\Auth\\Auth' => __DIR__ . '/../..' . '/app/classes/Auth.php',
+        'controller' => __DIR__ . '/../..' . '/app/core/controller.php',
+        'operations' => __DIR__ . '/../..' . '/app/core/operations.php',
         'v2\\Models\\AdminComment' => __DIR__ . '/../..' . '/app/models/v2/Models/AdminComment.php',
+        'v2\\Models\\BinaryTracker' => __DIR__ . '/../..' . '/app/models/v2/Models/BinaryTracker.php',
         'v2\\Models\\Broker' => __DIR__ . '/../..' . '/app/models/v2/Models/Broker.php',
         'v2\\Models\\Campaign' => __DIR__ . '/../..' . '/app/models/v2/Models/Campaign.php',
+        'v2\\Models\\Commission' => __DIR__ . '/../..' . '/app/models/v2/Models/Commission.php',
         'v2\\Models\\DepositOrder' => __DIR__ . '/../..' . '/app/models/v2/Models/DepositOrder.php',
+        'v2\\Models\\Document' => __DIR__ . '/../..' . '/app/models/v2/Models/Document.php',
         'v2\\Models\\Earning' => __DIR__ . '/../..' . '/app/models/v2/Models/Earning.php',
         'v2\\Models\\FinancialBank' => __DIR__ . '/../..' . '/app/models/v2/Models/FinancialBank.php',
+        'v2\\Models\\HeldCoin' => __DIR__ . '/../..' . '/app/models/v2/Models/HeldCoin.php',
+        'v2\\Models\\HotWallet' => __DIR__ . '/../..' . '/app/models/v2/Models/HotWallet.php',
+        'v2\\Models\\InvestmentPackage' => __DIR__ . '/../..' . '/app/models/v2/InvestmentPackage.php',
         'v2\\Models\\Market' => __DIR__ . '/../..' . '/app/models/v2/Models/Market.php',
+        'v2\\Models\\PayoutWallet' => __DIR__ . '/../..' . '/app/models/v2/Models/PayoutWallet.php',
         'v2\\Models\\Signals' => __DIR__ . '/../..' . '/app/models/v2/Models/Signals.php',
         'v2\\Models\\TradingAccount' => __DIR__ . '/../..' . '/app/models/v2/Models/TradingAccount.php',
         'v2\\Models\\UserBank' => __DIR__ . '/../..' . '/app/models/v2/Models/UserBank.php',
         'v2\\Models\\UserDocument' => __DIR__ . '/../..' . '/app/models/v2/Models/UserDocument.php',
+        'v2\\Models\\UserWithdrawalMethod' => __DIR__ . '/../..' . '/app/models/v2/Models/UserWithdrawalMethod.php',
+        'v2\\Models\\Wallet' => __DIR__ . '/../..' . '/app/models/v2/Models/Wallet.php',
         'v2\\Models\\Withdrawal' => __DIR__ . '/../..' . '/app/models/v2/Models/Withdrawal.php',
+        'v2\\Security\\TwoFactor' => __DIR__ . '/../..' . '/app/models/v2/Security/TwoFactor.php',
         'v2\\Shop\\Contracts\\OrderInterface' => __DIR__ . '/../..' . '/app/models/v2/Shop/Contracts/OrderInterface.php',
         'v2\\Shop\\Contracts\\PaymentMethodInterface' => __DIR__ . '/../..' . '/app/models/v2/Shop/Contracts/PaymentMethodInterface.php',
         'v2\\Shop\\Payments\\BankTransfer' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/BankTransfer.php',
+        'v2\\Shop\\Payments\\CoinPay' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/CoinPay.php',
+        'v2\\Shop\\Payments\\LivePay\\LivePay' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/LivePay/LivePay.php',
+        'v2\\Shop\\Payments\\LivePay\\Withdrawal' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/LivePay/Withdrawal.php',
+        'v2\\Shop\\Payments\\Paypal\\PayPal' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/Paypal/Paypal.php',
+        'v2\\Shop\\Payments\\Paypal\\PaypalAgreement' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/Paypal/PaypalAgreement.php',
+        'v2\\Shop\\Payments\\Paypal\\Subscription' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/Paypal/Subscription.php',
         'v2\\Shop\\Payments\\Paystack' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/Paystack.php',
+        'v2\\Shop\\Payments\\PerfectMoney\\PerfectMoney' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/PerfectMoney/PerfectMoney.php',
         'v2\\Shop\\Payments\\Rave' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/Rave.php',
         'v2\\Shop\\Payments\\Website' => __DIR__ . '/../..' . '/app/models/v2/Shop/Payments/Website.php',
         'v2\\Shop\\Shop' => __DIR__ . '/../..' . '/app/models/v2/Shop/Shop.php',
+        'v2\\Traits\\Wallet' => __DIR__ . '/../..' . '/app/models/v2/Traits/Wallet.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit727fe11b422d84badd5dd8c8ea53fa57::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit81eb7d45cb86396167b941f75b6bed30::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit81eb7d45cb86396167b941f75b6bed30::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit81eb7d45cb86396167b941f75b6bed30::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit81eb7d45cb86396167b941f75b6bed30::$classMap;
 
         }, null, ClassLoader::class);
     }

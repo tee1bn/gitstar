@@ -5,7 +5,7 @@
             <span class="fa fa-filter"></span>
         </button>
         <ul class="dropdown-menu" style="padding: 20px;">
-            <form action="<?=$action ?? '';?>" method="get" id="filter_form">
+            <form action="<?=$action;?>" method="get" id="filter_form">
                 <div class="row">
                     <div class="form-group col-sm-12">
                         <label>Name</label><br>
@@ -15,8 +15,44 @@
 
                 <div class="row">
                     <div class="form-group col-md-6">
+                      <label>Is LPR</label>
+                      <select name="is_lpr" class="form-control">
+                        <option value="">Select </option>
+                        <?php foreach ([1=> 'Yes', 0=> 'No'] as $key => $value) :?>
+                          <option <?=($sieve['is_lpr']==$key) ?'selected' : '';?> value="<?=$key;?>"><?=$value;?></option>
+                        <?php endforeach;?>
+                      </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label>Is Active</label>
+                      <select name="is_active" class="form-control">
+                        <option value="">Select </option>
+                        <?php foreach ([1=> 'Yes', 0=> 'No'] as $key => $value) :?>
+                          <option <?=($sieve['is_active']==$key) ?'selected' : '';?> value="<?=$key;?>"><?=$value;?></option>
+                        <?php endforeach;?>
+                      </select>
+                    </div>
+
+               
+                </div>
+
+
+                <div class="row">
+                    <div class="form-group col-md-6">
                         <label>Account Number</label>
                         <input type="number" name="account_number" value="<?= $sieve['account_number']; ?>" class="form-control">
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                      <label>Broker</label>
+                      <select name="broker" class="form-control" >
+                        <option value="">Select Broker</option>
+                        <?php foreach (v2\Models\Broker::Active()->get() as $key => $broker):?>
+                          <option <?=($sieve['broker']==$broker->id) ?'selected' : '';?> value="<?=$broker->id;?>"><?=$broker->name;?></option>
+                        <?php endforeach;?>
+                      </select>
                     </div>
 
        

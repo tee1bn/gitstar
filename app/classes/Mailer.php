@@ -44,7 +44,7 @@ class Mailer extends PHPMailer
 
                 //To address and name
                 $this->clearAddresses();
-                $this->addAddress("$sendto_email", "$sendto_name");
+                // $this->addAddress("$sendto_email", "$sendto_name");
 
                 //Set BCC address
             
@@ -93,9 +93,9 @@ public function include_message($subject, $body)
 }
 
 public function sendMail($to, $subject, $body, $recipient_name=''){
-    Session::putFlash("danger","Mailer not enabled");
+/*    Session::putFlash("danger","Mailer not enabled");
     return;
-    //To address and name
+*/    //To address and name
     $this->clearAddresses();
     $this->addAddress("$to", $recipient_name);
 

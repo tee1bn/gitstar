@@ -4,7 +4,7 @@ $page_title = "Faqs";
 
 
     <!-- BEGIN: Content-->
-    <script src="<?=general_asset;?>/js/angulars/faq.js"></script>
+    <script src="<?=asset;?>/angulars/faq.js"></script>
     <div class="app-content content" id="content" ng-controller="FaqController" ng-cloak>
       <div class="content-wrapper">
         <div class="content-header row">

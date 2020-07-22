@@ -2,15 +2,16 @@
 <!DOCTYPE html>
 <html ng-app="app" class="loading" lang="en" data-textdirection="ltr">
   <!-- BEGIN: Head-->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <head> 
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="<?=@$page_description;?>">
     <meta name="keywords" content="<?=@$page_keywords;?>">
     <meta name="author" content="<?=$page_author;?>">
     <title><?=@$page_title;?> | <?=project_name;?></title>
-    <link rel="shortcut icon" type="image/x-icon" href="<?=domain;?>/<?=$fav_icon;?>">
+    <link rel="apple-touch-icon" href="<?=$logo;?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?=$logo;?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
@@ -30,27 +31,38 @@
     <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/components.min.css">
     <!-- END: Theme CSS-->
 
+    <!-- tree -->
+    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/binary-tree.css">
+
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/core/menu/menu-types/vertical-menu.min.css">
     <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/core/colors/palette-gradient.min.css">
     <!-- link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/pages/users.css')-->
     <!-- END: Page CSS-->
 
-
-  <script src="<?=$asset;?>/tinymce/tinymce/tinymce.js" referrerpolicy="origin"></script>
-
-
-
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
     <!-- END: Custom CSS-->
+   <script src="<?=$asset;?>/tinymce/tinymce/tinymce.js" referrerpolicy="origin"></script>
+
+    <script src="https://cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
+     
+
+
     <link rel="stylesheet" type="text/css" href="<?=asset;?>/fonts/feather/style.min.css">
     <script src="<?=asset;?>/js/jquery1.12.min.js"></script>
+
+
   </head>
   <!-- END: Head-->
 
-  <?php       require_once "../app/others/angularjs_installation.php" ; ?>
 
+    <script src="<?=asset;?>/angulars/angularjs.js"></script>
+    <script src="<?=asset;?>/angulars/angular-sanitize.js"></script>
+    <script>
+        let $base_url = "<?=domain;?>";
+        var app = angular.module('app', ['ngSanitize']);
+    </script>
 
 
   <!-- BEGIN: Body-->
@@ -61,11 +73,10 @@
       <div class="navbar-wrapper">
         <div class="navbar-header">
           <ul class="nav navbar-nav flex-row">
-            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="<?=domain;?>">
-              <img class="<?=project_name;?>-logo" alt="" src="<?=domain;?>/template/default/app-assets/images/logo/9gforex-white.png" style="height: 32px;">
-              </a></li>
+            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
+              <i class="ft-menu font-large-1"></i></a></li>
+            <li class="nav-item"><a class="navbar-brand" href="#" style="padding: 0px;">
+              <img class="brand-logo" alt="<?=project_name;?> logo" src="<?=$logo;?>" style="height: 52px;width: 181px;">
             <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
           </ul>
         </div>
@@ -75,8 +86,9 @@
               <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
 
 
-
               <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
+              <li id="translator" class="nav-item" style="position: relative;top: 20px;"><div><?php  'template/default/app-assets/translator.php';?> </div></li>
+
             <!--   <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
                 <div class="search-input">
                   <input class="input" type="text" placeholder="Explore <?=project_name;?>...">
@@ -202,7 +214,12 @@
       
     .card-group,.card-header{
 
-    border: 1px solid #c985294a;
+       border: 1px solid #c985294a;
+    }
+
+    .dropdown-menu{
+
+      width: 50% !important;
     }
     </style>
 

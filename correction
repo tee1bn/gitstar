@@ -1,0 +1,125 @@
+select DISTINCT (u.user_id ) from (select * from `wallet_for_commissions` where date(`created_at`) >= '2020-03-01' and date(`created_at`) <= '2020-05-23' order by `created_at` desc ) as u
+
+This is the sql to get commissions before 23 of may 2020
+
+
+
+
+users_id
+---------
+61,
+44,
+66,
+13,
+1,
+12,
+80,
+74,
+91,
+92,
+76,
+14,
+104,
+102,
+100,
+90,
+32
+
+
+ 
+61 - lilian ---corrected
+---------
+0.05 #7
+0.01 #114
+0.13 #326
+
+7,114,326
+
+
+
+
+44 - RaúlSabino ---corrected
+0.05 #10
+1.81 # 13
+0.05 # 16
+
+
+66 - robelin ---corrected
+0.13 #6
+0.03 #113
+1.0 #325
+0.01 #358
+
+
+13-futuromillonario  ---corrected
+
+1-company ----corrected
+
+
+12-eliezer  --corrected
+5.5 #257
+
+
+80 - Cesarina ---corrected
+0.20  #112
+0.03 #357
+
+
+74 - prototipo7 ---corrected
+0.10 #220
+0.13 #128
+
+
+91- eribertotaveras4 ---corrected
+0.56 #175
+
+
+92 - melina99 --corrected
+2.0 #218
+
+
+
+
+76 - (worldofdocs) --corrected
+0.25 #219
+
+
+
+
+
+
+
+tobe continued
+
+
+
+
+14 - Andex --- corrected
+13.75 #256
+
+
+
+104 - Aliannys --corrected
+4  #266
+
+
+102 - robert -- corrected
+0.05 #267
+
+
+
+100 - Aquile --corrected
+0.02 - #268
+
+
+90 - Edgar --corrected
+0.02 #356
+
+
+32 - kellag1306 ---non
+
+
+
+
+
+

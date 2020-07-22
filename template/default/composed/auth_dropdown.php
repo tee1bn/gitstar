@@ -3,6 +3,7 @@
     $current_url = MIS::current_url();
 
     $allowed =[
+      // 'user/profile',
       'user/cart',
       'shop',
       'shop/full_view',
@@ -66,14 +67,15 @@
       
     </span></a>
         <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="<?=domain;?>/user/profile"><i class="ft-user"></i> Profile </a>
           <!-- <a class="dropdown-item" href="<?=domain;?>/user/messages"><i class="ft-mail"></i> Messages</a> -->
-          <!-- <a class="dropdown-item" href="<?=domain;?>/user/courses"><i class="ft-clipboard"></i>My Courses</a> -->
 
 
           <?php if ($auth->is_instructor()) :?>
           <!-- <a class="dropdown-item" href="<?=domain;?>/instructor"><i class="ft-user-plus"></i> Instructor</a> -->
           <?php endif;?>
+          <a class="dropdown-item" href="<?=domain;?>/user/dashboard"><i class="ft-clipboard"></i>My Dashboard</a>
+          <a class="dropdown-item" href="<?=domain;?>/user/courses"><i class="ft-award"></i>My Courses</a>
+          <!-- <a class="dropdown-item" href="<?=domain;?>/user/profile"><i class="ft-user"></i> Profile </a> -->
           <a class="dropdown-item" href="<?=domain;?>/user/password"><i class="ft-lock"></i> Password</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="<?=domain;?>/login/logout"><i class="ft-power"></i> Logout</a>
@@ -85,7 +87,7 @@
     <?php else:?>
 
     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-    <span class=" ft ft-lock" style="position: relative;top: 5px;font-size: 20px;"></span></a>
+    <span class=" ft ft-user" style="position: relative;top: 5px;font-size: 20px;"></span></a>
 
       <div class="dropdown-menu dropdown-menu-right">
         <a class="dropdown-item" href="<?=domain;?>/register"><i class=""></i> Sign Up</a>

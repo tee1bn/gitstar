@@ -1,0 +1,29 @@
+commission id 
+#2567
+
+
+
+#271
+
+
+#170
+
+
+codeguard:Xl4~3v}osA]S
+
+
+hot wallet
+	move to hot walet from investments (credits)
+		SELECT * FROM `wallet_for_hot_wallet` WHERE earning_category='hot_wallet' and type='credit' ORDER BY `id` ASC
+
+	moved to cold wallet:
+		SELECT * FROM `wallet_for_hot_wallet` WHERE earning_category='hot_wallet' and type='debit' and comment like '%move%'
+
+	debits from investment
+	SELECT * FROM `wallet_for_hot_wallet` WHERE earning_category='investment' and type='debit' and comment LIKE '%split%'
+
+
+
+cold wallet
+	all credit received
+	select * from `wallet_for_held_coin` where `earning_category` = 'hot_wallet' and `type` = 'credit'

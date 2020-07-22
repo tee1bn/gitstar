@@ -321,6 +321,7 @@ class UserProfileController extends controller
                     'required' => true,
                     'date' => 'Y-m-d',
                     'min_age' => '18',
+                    // 'max' => 2002,
                 ],
 
 
@@ -356,7 +357,7 @@ class UserProfileController extends controller
                 $auth = $this->auth();
 
             if ($this->validator->passed()) {
-                if ($auth->email != $_POST['email']) {
+                /*if ($auth->email != $_POST['email']) {
 
                     $auth->update(['email_verification' => md5(uniqid())]);
                 }
@@ -365,38 +366,34 @@ class UserProfileController extends controller
                 if ($auth->phone != $_POST['phone']) {
 
                     $auth->update(['phone_verification' => User::generate_phone_code_for($auth->id)]);
-                }
+                }*/
 
+                $unsets = array_filter(User::$not_changeable, function($item) use ($auth){
+                    if ($auth[$item] == null) {
+                        return false;
+                    }
+                    return true;
+
+                });
+                    
+
+
+
+
+ 
                 $posted = Input::all();
 
-                if ($auth->has_verified_profile()) {
-                    $disabled = 'disabled="disabled"';
 
-                    unset($posted['email']);
-                    unset($posted['phone']);
-                    unset($posted['username']);
-
-                    $this->auth()->update([
-                        'address' => $_POST['address'],
-                        'birthdate' => $_POST['birthdate'],
-                        'country' => $_POST['country'],
-                    ]);
-
-                }else{
-
-                    $this->auth()->update($posted);
-
-
+                foreach ($unsets as $key => $item) {
+                    unset($posted[$item]);
                 }
 
-
-
+                $auth->update($posted);                
 
                 Session::putFlash('success', 'Profile updated successfully!');
 
             } else {
 
-        // print_r($this->validator->errors());
                 Session::putFlash('danger', Input::inputErrors());
             }
 

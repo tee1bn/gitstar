@@ -5,45 +5,51 @@
             <span class="fa fa-filter"></span>
         </button>
         <ul class="dropdown-menu" style="padding: 20px;">
-            <form action="<?=$action ?? '' ;?>" method="get" id="filter_form">
+            <form action="<?=$action;?>" method="get" id="filter_form">
                 <div class="row">
 
                     <div class="form-group col-sm-6">
-                        <label>ID</label><br>
-                        <input type="" name="ref" placeholder="ID or Ref" class="form-control" value="<?=$sieve['ref']??'';?>">
+                        <label>Ref</label><br>
+                        <input type="" name="ref" class="form-control" value="<?=$sieve['ref'];?>">
                     </div>
                     
 
                     <div class="form-group col-sm-6">
-                        <label>User </label><br>
-                        <input type="" name="name" placeholder="First, Last, Name, email, phone, or username" 
-                        class="form-control" value="<?=$sieve['name']??'';?>">
+                        <label>Name</label><br>
+                        <input type="" name="name" placeholder="First, Last, Middle Name, email, phone, or username" class="form-control" value="<?=$sieve['name'];?>">
                     </div>
 
                 </div>
 
           
                 <div class="row">
-                 
+                   <div class="form-group col-md-6">
+                       <label>Account Number</label><br>
+                       <input type="" name="account_number" placeholder="Account number" class="form-control" value="<?=$sieve['account_number'];?>">
+                   </div>
+
 
                     <div class="form-group col-md-6">
                         <label>Status</label>
                         <select class="form-control" name="status">
                             <option value="">Select</option>
                             <?php foreach(v2\Models\Withdrawal::$statuses as $key => $value) :?>
-                                <option value="<?=$key;?>" <?=(  (isset($sieve['status'])) &&  ( $sieve['status']===$key))?'selected':'';?>> <?=$value;?></option>
+                                <option value="<?=$key;?>" <?=(($sieve['status'])===$key)?'selected':'';?>> <?=$value;?></option>
                             <?php endforeach ; ?>
                         </select>
 
                     </div>
 
-           
+                </div>
+                
+                <div class="row">
+                
                     <div class="form-group col-md-6">
-                        <label>Method</label>
-                        <select class="form-control" name="withdrawal_method">
+                        <label>Bank</label>
+                        <select class="form-control" name="bank_id">
                             <option value="">Select</option>
-                            <?php foreach(v2\Models\UserWithdrawalMethod::$method_options as $key => $method) :?>
-                                <option value="<?=$key;?>" <?=( (isset($sieve['withdrawal_method'])) &&($sieve['withdrawal_method']==$key)) ?'selected':'';?>> <?=$method['name'];?></option>
+                            <?php foreach(v2\Models\FinancialBank::all() as $key => $bank) :?>
+                                <option value="<?=$bank->id;?>" <?=($sieve['bank_id']==$bank->id)?'selected':'';?>> <?=$bank['bank_name'];?></option>
                             <?php endforeach ; ?>
                         </select>
 

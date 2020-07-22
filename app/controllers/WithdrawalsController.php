@@ -99,6 +99,27 @@ class WithdrawalsController extends controller
             DB::commit();
             Session::putFlash('success', "Withdrawal marked as $status");
 
+
+            //send withdrawal completed email
+            if ($withdrawal->is_complete()) {
+
+
+                $receiver_subject = "Withrawal Request ID:#$withdrawal->id Completed";
+                $mailer = new Mailer;
+
+                $receiver_content =  $this->buildView('emails/completed_withdrawal', compact('withdrawal'), true);
+
+                //sender email
+                $mailer->sendMail(
+                    "{$withdrawal->user->email}",
+                    "$receiver_subject",
+                    $receiver_content,
+                    "{$withdrawal->user->firstname}"
+                );
+
+            }
+
+
         } catch (Exception $e) {
             DB::rollback();
             Session::putFlash('danger', "Something went wrong. Please try again.");

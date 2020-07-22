@@ -44,15 +44,6 @@ class Config
 		return	 'admin_panel';
 	}
 
-
-	public  static function main_domain()
-	{
-		return	"http://tauruscapital.biz";
-	}
-	
-
-
-
 	/**
 	 * returns the domain of this project
 	 * @return string
@@ -87,7 +78,7 @@ class Config
 	 */
 	public  static function project_name()
 	{
-		return	 "Taurus Capital";
+		return	 "Gitstar Digital";
 
 	}
 

@@ -14,6 +14,10 @@ use v2\Models\HotWallet;
 use v2\Models\InvestmentPackage;
 use v2\Models\UserDocument;
 use v2\Models\Withdrawal;
+use v2\Models\Market;
+use  Filters\Filters\MarketFilter;
+use  Filters\Filters\PostFilter;
+
 
 
 /**
@@ -29,11 +33,6 @@ class AdminController extends controller
 
 
         $this->middleware('administrator')->mustbe_loggedin();
-    }
-
-    public function index()
-    {
-        echo "string";
     }
 
 
@@ -209,6 +208,91 @@ class AdminController extends controller
 
     }
 
+
+
+        public function preview_post($post_id)
+        {
+                try {
+                     $post = Post::find($post_id);
+                    
+                } catch (Exception $e) {
+                    
+                    Session::putFlash('warning','Could Not Find Post. Please try again');
+                    Redirect::back();
+                }
+
+            $this->view('guest/single-post', compact('post'));  //note this is
+        }
+
+
+
+
+        public function blog()
+        {
+      
+
+        $sieve = $_REQUEST;
+        $query = Post::latest();
+                    
+        $page = (isset($_GET['page']))?  $_GET['page'] : 1 ;
+        $per_page = 50;
+        $skip = (($page -1 ) * $per_page) ;
+
+        $filter =  new  PostFilter($sieve);
+
+        $data =  $query->Filter($filter)->count();
+
+        $posts =  $query->Filter($filter)
+                        ->offset($skip)
+                        ->take($per_page)
+                        ->get();  //filtered
+
+
+        $this->view('admin/blog', compact('posts', 'sieve', 'data','per_page'));
+        }
+
+        public function submited_blog()
+        {
+
+            $response = DB::select("SELECT m1.*
+            FROM market m1 LEFT JOIN market m2
+             ON (m1.item_id = m2.item_id AND m1.id < m2.id)
+            WHERE m2.id IS NULL 
+            AND m1.category = 'post'
+            ;
+            ");
+
+            $market_ids = collect($response)->pluck('id')->toArray();
+
+
+            $sieve = $_REQUEST;
+            $query = Market::whereIn('id', $market_ids);
+            $sieve = array_merge($sieve, ['category' => 'post']);
+            // print_r($sieve);
+                        
+            $page = (isset($_GET['page']))?  $_GET['page'] : 1 ;
+            $per_page = 50;
+            $skip = (($page -1 ) * $per_page) ;
+
+            $filter =  new  MarketFilter($sieve);
+
+            $data =  $query->Filter($filter)->count();
+
+            $posts =  $query->Filter($filter)
+                            ->offset($skip)
+                            ->take($per_page)
+                            ->get();  //filtered
+
+
+    /*
+            print_r($posts->toArray());
+            return;
+    */
+            
+            $this->view('admin/submited_blog', compact('posts', 'sieve', 'data','per_page'));
+        }
+
+
     public function faqs()
     {
         $this->view("admin/faqs");
@@ -350,6 +434,7 @@ class AdminController extends controller
         // $sieve = array_merge($sieve, $extra_sieve);
 
         $query = Withdrawal::latest();
+        $total = $query->count();
         // ->where('status', 1);  //in review
         $sieve = array_merge($sieve);
         $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
@@ -365,8 +450,9 @@ class AdminController extends controller
             ->take($per_page)
             ->get();  //filtered
 
+        $note = MIS::filter_note($withdrawals->count() , $data, $total,  $sieve , 1);
 
-        $this->view('admin/withdrawal-history', compact('withdrawals', 'sieve', 'data', 'per_page'));
+        $this->view('admin/withdrawal-history', compact('withdrawals', 'sieve', 'data', 'per_page','note'));
     }
 
 

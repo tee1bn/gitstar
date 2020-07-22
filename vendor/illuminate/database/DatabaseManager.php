@@ -8,12 +8,15 @@ use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Illuminate\Database\Connectors\ConnectionFactory;
 
+/**
+ * @mixin \Illuminate\Database\Connection
+ */
 class DatabaseManager implements ConnectionResolverInterface
 {
     /**
      * The application instance.
      *
-     * @var \Illuminate\Foundation\Application
+     * @var \Illuminate\Contracts\Foundation\Application
      */
     protected $app;
 
@@ -41,7 +44,7 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Create a new database manager instance.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @param  \Illuminate\Database\Connectors\ConnectionFactory  $factory
      * @return void
      */
@@ -59,7 +62,7 @@ class DatabaseManager implements ConnectionResolverInterface
      */
     public function connection($name = null)
     {
-        list($database, $type) = $this->parseConnectionName($name);
+        [$database, $type] = $this->parseConnectionName($name);
 
         $name = $name ?: $database;
 
@@ -68,7 +71,7 @@ class DatabaseManager implements ConnectionResolverInterface
         // set the "fetch mode" for PDO which determines the query return types.
         if (! isset($this->connections[$name])) {
             $this->connections[$name] = $this->configure(
-                $connection = $this->makeConnection($database), $type
+                $this->makeConnection($database), $type
             );
         }
 
@@ -134,7 +137,7 @@ class DatabaseManager implements ConnectionResolverInterface
         $connections = $this->app['config']['database.connections'];
 
         if (is_null($config = Arr::get($connections, $name))) {
-            throw new InvalidArgumentException("Database [$name] not configured.");
+            throw new InvalidArgumentException("Database [{$name}] not configured.");
         }
 
         return $config;
@@ -177,9 +180,9 @@ class DatabaseManager implements ConnectionResolverInterface
      */
     protected function setPdoForType(Connection $connection, $type = null)
     {
-        if ($type == 'read') {
+        if ($type === 'read') {
             $connection->setPdo($connection->getReadPdo());
-        } elseif ($type == 'write') {
+        } elseif ($type === 'write') {
             $connection->setReadPdo($connection->getPdo());
         }
 

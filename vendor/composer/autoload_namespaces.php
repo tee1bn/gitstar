@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
+    'Requests' => array($vendorDir . '/rmccue/requests/library'),
+    'PayPal' => array($vendorDir . '/paypal/rest-api-sdk-php/lib'),
+    'Evenement' => array($vendorDir . '/evenement/evenement/src'),
 );

@@ -14,8 +14,13 @@ $capsule->addConnection([
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
+	// 'strict'    => true,
+
 ]);
 
+
+
+$capsule->setAsGlobal();  //this is important
 $capsule->bootEloquent();
 
 
