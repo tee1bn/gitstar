@@ -96,7 +96,8 @@
 
                 <div class="form-group">
                   <label>Content</label>
-                  <textarea class="form-control" id="editor1" name="content" style="height: 200px;" placeholder="Content of post" required=""><?=$post->content;?></textarea>
+                  <textarea class="form-control" id="editor1" name="content" style="height: 200px;" placeholder="Content of post" 
+                  required=""><?=$post->content ?? Post::$content;?></textarea>
                 </div>
 
                 <div class="form-group">

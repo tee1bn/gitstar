@@ -79,17 +79,17 @@ $address = '<address>17, Isikalu lane, Apapa, Lagos, Nigeria</address>
     height: 35px;
     width:  35px;
 " />
-    <a href="#body" class="scrollto" style="text-transform:uppercase;">Git<span>Star Digital</span></a></h1>
+    <a href="<?=domain;?>" class="scrollto" style="text-transform:uppercase;">Git<span>Star Digital</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
 <!--          <a href="#body"><img src="<?=$this_folder;?>/asset/img/logo.png" alt="" title="" /></a>
  -->      </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#body">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li class="menu-active"><a href="<?=domain;?>">Home</a></li>
+          <li><a href="<?=domain;?>#about">About Us</a></li>
+          <li><a href="<?=domain;?>#services">Services</a></li>
+          <li><a href="<?=domain;?>#portfolio">Portfolio</a></li>
           <!-- <li><a href="#team">Team</a></li> -->
         <!--   <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>

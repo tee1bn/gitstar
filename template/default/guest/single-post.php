@@ -41,12 +41,21 @@ die();
 
           <div class="owl-carousel portfolio-details-carousel">
             <?php foreach ($post->image_path['images'] as $key => $image) :?>
-            <img src="<?=domain;?>/<?=$image['main_image'];?>" class="img-fluid" alt="<?=$post->title;?>" style="height: 642.22px; width: 1110px; object-fit: cover;">
+            <img src="<?=domain;?>/<?=$image['main_image'];?>" class="img-fluid" alt="<?=$post->title;?>" style="width: 1110px; object-fit: cover;">
             <?php endforeach ;?>
           </div>
 
           <div class="portfolio-info">
            <?=$post->summary;?>
+
+           <?=$post->tagsLabel;?>
+           <hr>
+           <div class="btn-group">
+             <a href="<?=domain;?>#contact" class="btn btn-secondary">Send us a Message</a>
+             <a href="<?=domain;?>" class="btn btn-dark">Call</a>
+           </div>
+
+
           </div>
 
         </div>

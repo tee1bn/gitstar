@@ -26,6 +26,14 @@ class Post extends Eloquent
     </ul>
     ';
 
+    public static $content = '
+   <h2>This is an example of portfolio detail</h2>
+   <p>
+     Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+   </p>
+
+    ';
+
     //to be worked on
     public function is_ready_for_review()
     {
@@ -392,6 +400,16 @@ class Post extends Eloquent
       return  json_decode($value, true);       
 	}
 
+	public function gettagsLabelAttribute()
+	{
+		$tags = $this->tagsArray;
+		$label = '';
+		foreach ($tags as $key => $tag) {
+			$label .="<span class='badge badge-dark'>$tag</span> ";
+		}
+
+		return $label;
+	}
 
 
 	public function gettagsArrayAttribute()
@@ -399,7 +417,7 @@ class Post extends Eloquent
 		if ($this->tags==null) {
 			return [];
 		}
-      return  json_decode($this->tags, true);       
+      return  explode(",", $this->tags);
 	}
 
 
