@@ -136,7 +136,7 @@ $page_keywords = "website designers,web design,web design company,web design com
       <div class="container">
         <div class="section-header">
           <h2>Our Portfolio</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <p>We are proud of our solutions trust us, we build solutions not products...</p>
         </div>
 
         <div class="row portfolio-container">
