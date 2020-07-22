@@ -3,7 +3,7 @@ $page_title = "$post->title built by $project_name";
 
 $page_description = "{$post->intro()}";
 
-$page_keywords = implode("," , $post->tagsArray);
+$page_keywords = $post->tags;
 /*
 echo "<pre>";
 print_r($post->imagepath);

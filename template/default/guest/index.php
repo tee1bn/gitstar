@@ -141,7 +141,7 @@ $page_keywords = "website designers,web design,web design company,web design com
 
         <div class="row portfolio-container">
                      
-       <?php foreach (Post::recent_posts(3) as $live_post ):
+       <?php foreach (Post::recent_posts(10) as $live_post ):
         $other_post  = $live_post->good();
         ?>
 
@@ -385,7 +385,7 @@ $page_keywords = "website designers,web design,web design company,web design com
 
 
                   <div class="col-md-4 mt-30">
-                      <button type="submit" class="btn btn-default">SEND MESSAGE</button>
+                      <button type="submit" class="btn btn-light">SEND MESSAGE</button>
 
                   </div>
               </div>

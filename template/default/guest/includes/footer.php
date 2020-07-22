@@ -15,17 +15,25 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="<?=$this_folder;?>/asset/lib/jquery/jquery.min.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/easing/easing.min.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/superfish/hoverIntent.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/superfish/superfish.min.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/wow/wow.min.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="<?=$this_folder;?>/asset/lib/sticky/sticky.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+
+
+  <!-- Vendor JS Files -->
+  <script src="<?=$this_folder;?>/asset/vendor/jquery/jquery.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/php-email-form/validate.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/wow/wow.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/venobox/venobox.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/superfish/superfish.min.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="<?=$this_folder;?>/asset/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="<?=$this_folder;?>/asset/js/main.js"></script>
+
+
   <!-- Contact Form JavaScript File -->
   <!-- <script src="<?=$this_folder;?>/asset/contactform/contactform.js"></script> -->
 
