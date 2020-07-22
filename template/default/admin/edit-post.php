@@ -7,12 +7,12 @@ $page_title = "Edit Post";
     <div class="app-content content">
       <div class="content-wrapper">
         <div class="content-header row">
-          <div class="content-header-left col-md-6 col-12 mb-2">
+          <div class="content-header-left col-6 mb-2">
             <?php include 'includes/breadcrumb.php';?>
 
             <h3 class="content-header-title mb-0">Edit Post  <?=$post->ApprovalStatus;?></h3>
           </div>
-          <div class="content-header-right text-md-right col-md-6 col-12">
+          <div class="content-header-right text-right col-6">
                     <div class="form-group"> 
                                <a href="<?=domain;?>/blog/create_post">
                                 <button class="btn-icon btn btn-secondary btn-round" type="button">

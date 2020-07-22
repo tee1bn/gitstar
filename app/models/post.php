@@ -11,10 +11,20 @@ class Post extends Eloquent
 {
 	use Filterable;
 		
-		protected $fillable = ['title', 'category_id','user_id', 'image_path' , 'content', 'tags', 'consise'];
+		protected $fillable = ['title', 'category_id','user_id', 'image_path' , 'content', 'tags', 'summary'];
 
 
     public static $category_in_market = 'post';
+
+    public static $summary = '
+    <h3>Project information</h3>
+    <ul>
+      <li><strong>Category</strong>: Web design</li>
+      <li><strong>Client</strong>: ASU Company</li>
+      <li><strong>Project date</strong>: 01 March, 2020</li>
+      <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+    </ul>
+    ';
 
     //to be worked on
     public function is_ready_for_review()
@@ -68,6 +78,8 @@ class Post extends Eloquent
 					 	$this->update([
 									'title' 		=> $inputs['title'],
 									'category_id' 	=> $inputs['category_id'],
+									'tags' 			=> $inputs['tags'],
+									'summary' 		=> $inputs['summary'],
 									'content' 		=> $inputs['content']
 					 				]);
 			 			$this->update_post_images($files, $inputs['images_to_be_deleted']);

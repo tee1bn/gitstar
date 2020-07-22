@@ -106,7 +106,7 @@ class BlogController extends controller
         if ($update === true) {
                 Session::putFlash('success','Post Updated Successfully.');
             }
-        Redirect::back();
+        // Redirect::back();
     }
 
 

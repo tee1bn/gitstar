@@ -14,11 +14,13 @@
 
               <form method="post" action="<?=domain;?>/blog/update_post" enctype="multipart/form-data" class="ajax_form">
                 <div class="form-group">
-                  <input class="form-control " value="<?=$post->title;?>" name="title" placeholder="Post title" type="text" required="">
+                  <label>Title</label>
+                  <input class="form-control " value="<?=$post->title;?>" name="title" placeholder="post title" type="text" required="">
                 </div>
 
 
                 <div class="form-group">
+                  <label>Category</label>
                   <select class="select2_single form-control select2-hidden-accessible" name="category_id" tabindex="-1" aria-hidden="true">
                     <option>Category</option>
                       <?php foreach (Category::all() as $key): ?>
@@ -31,13 +33,18 @@
                 </div>
 
 
+                <div class="form-group">
+                  <label>Tags</label>
+                  <input class="form-control" value="<?=$post->tags;?>" name="tags" placeholder="" type="text">
+                  <span class="text-danger">*comma separated</span>
+                </div>
 
                 <div class="form-group">
                   <input type="file"  class="form-control" multiple=""  name="image_path[]" placeholder="Featured image" >
                 </div>
 
-                  <div class="row">
                   <small  style="margin-left: 15px;color: red;"> Mark pictures and click Update to delete marked images</small>
+                  <div class="row">
                   <?php
                   $i=0;
                     $images = $post->image_path['images'] ?? [];
@@ -88,7 +95,14 @@
 
 
                 <div class="form-group">
+                  <label>Content</label>
                   <textarea class="form-control" id="editor1" name="content" style="height: 200px;" placeholder="Content of post" required=""><?=$post->content;?></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Summary</label>
+                  <textarea class="form-control" id="editor2" name="summary" style="height: 200px;" placeholder="Summary of post"
+                   required=""><?=$post->summary ?? Post::$summary;?></textarea>
                 </div>
                 <input type="hidden"  name="id" value="<?=$post->id;?>">
 
@@ -113,6 +127,15 @@
       <script>    
 
           var editor1 = CKEDITOR.replace( 'editor1', {
+                height: 250,
+                // Configure your file manager integration. This example uses CKFinder 3 for PHP.
+                filebrowserBrowseUrl: '/uploads/media',
+                filebrowserImageBrowseUrl: '/uploads/media?type=Images',
+                filebrowserUploadUrl: '/media/upload/files',
+                filebrowserImageUploadUrl: '/media/upload/images'
+              } );
+
+          var editor2 = CKEDITOR.replace( 'editor2', {
                 height: 250,
                 // Configure your file manager integration. This example uses CKFinder 3 for PHP.
                 filebrowserBrowseUrl: '/uploads/media',
