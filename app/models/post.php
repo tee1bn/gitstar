@@ -3,8 +3,6 @@
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use v2\Models\Market;
-use Illuminate\Database\Capsule\Manager as DB;
-
 
 use  Filters\Traits\Filterable;
 
@@ -41,7 +39,7 @@ class Post extends Eloquent
     {
        $required =  [                   'title',
                                         'category_id',
-                                        'content',
+                                        // 'content',
                                         // 'image',
                                     ];
 
@@ -224,7 +222,7 @@ class Post extends Eloquent
 
 
 
-		$response = DB::select("SELECT m1.*
+/*		$response = DB::select("SELECT m1.*
 		FROM market m1 LEFT JOIN market m2
 		 ON (m1.item_id = m2.item_id AND m1.id < m2.id)
 		WHERE m2.id IS NULL 
@@ -235,7 +233,9 @@ class Post extends Eloquent
 		$market_ids = collect($response)->pluck('id')->toArray();
 
 
-		$posts = Market::whereIn('id', $market_ids)->latest()
+*/
+
+		$posts = Market::latest()
 								->GoodsBelongingTo('post')
 								->OnSale()
 								->take($qty)->get();
