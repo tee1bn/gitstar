@@ -48,7 +48,9 @@ die();
           <div class="portfolio-info">
            <?=$post->summary;?>
 
-           <?=$post->tagsLabel;?>
+           <div style="width: 260px;">
+            <?=$post->tagsLabel;?>
+           </div>
            <hr>
            <div class="btn-group">
              <a href="<?=domain;?>#contact" class="btn btn-secondary">Send us a Message</a>

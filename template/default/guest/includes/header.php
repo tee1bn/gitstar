@@ -23,6 +23,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="<?=$this_folder;?>/asset/css/style.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 </head>

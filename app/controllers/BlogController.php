@@ -103,7 +103,7 @@ class BlogController extends controller
         $post = Post::find(Input::get('id'));
         $update =   $post->update_post($_POST, $_FILES['image_path']);
 
-        if ($update === true) {
+        if ($update == true) {
                 Session::putFlash('success','Post Updated Successfully.');
             }
         // Redirect::back();

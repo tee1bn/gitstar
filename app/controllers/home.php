@@ -115,6 +115,7 @@ class home extends controller
             $support_ticket->customer_name
         );
 
+        
         Session::putFlash('success', "Message sent successfully.");
 
         Redirect::back();
