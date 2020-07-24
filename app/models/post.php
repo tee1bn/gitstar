@@ -3,6 +3,8 @@
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use v2\Models\Market;
+use Illuminate\Database\Capsule\Manager as DB;
+
 
 use  Filters\Traits\Filterable;
 
@@ -76,7 +78,7 @@ class Post extends Eloquent
 															'required'=> true,
 															],
 														'content'=> [
-															'required'=> true,
+															// 'required'=> true,
 															],
 
 													));
@@ -220,7 +222,20 @@ class Post extends Eloquent
 	public static function recent_posts($qty = 3){
 
 
-		$posts = Market::latest()
+
+
+		$response = DB::select("SELECT m1.*
+		FROM market m1 LEFT JOIN market m2
+		 ON (m1.item_id = m2.item_id AND m1.id < m2.id)
+		WHERE m2.id IS NULL 
+		AND m1.category = 'post'
+		;
+		");
+
+		$market_ids = collect($response)->pluck('id')->toArray();
+
+
+		$posts = Market::whereIn('id', $market_ids)->latest()
 								->GoodsBelongingTo('post')
 								->OnSale()
 								->take($qty)->get();
